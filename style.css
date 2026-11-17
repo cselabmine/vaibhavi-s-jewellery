@@ -3,56 +3,52 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Georgia', serif;
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #fffaf2;
-    color: #333;
+    background: #fff8f8;
+    color: #4b2635;
 }
 
-/* Header */
 header {
-    background: #501b13;
+    background: #641d3b;
     color: white;
-    padding: 18px 7%;
+    padding: 20px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .logo {
-    font-size: 27px;
+    font-size: 25px;
     font-weight: bold;
-    color: #ffc857;
+    color: #ffd98a;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 20px;
+    margin: 10px;
     font-size: 16px;
 }
 
 nav a:hover {
-    color: #ffc857;
+    color: #ffd98a;
 }
 
-/* Hero section */
 .hero {
-    min-height: 550px;
+    min-height: 500px;
     background:
-    linear-gradient(#0008, #0008),
-    url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600")
+    linear-gradient(rgba(50,0,20,.45),rgba(50,0,20,.45)),
+    url("https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=1600")
     center/cover;
-
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
     color: white;
     padding: 30px;
@@ -60,157 +56,155 @@ nav a:hover {
 
 .hero h1 {
     font-size: 55px;
-    margin-bottom: 15px;
+    color: #ffdf9e;
+    margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 20px;
-    margin-bottom: 25px;
+    font-size: 21px;
+    margin-bottom: 30px;
 }
 
-/* Buttons */
 .btn {
     display: inline-block;
-    background: #e9a52b;
-    color: #25120d;
-    padding: 13px 27px;
-    text-decoration: none;
+    background: #d99b48;
+    color: white;
     border: none;
-    border-radius: 5px;
+    padding: 13px 28px;
+    border-radius: 30px;
+    text-decoration: none;
     cursor: pointer;
-    font-weight: bold;
     font-size: 16px;
 }
 
 .btn:hover {
-    background: #ffc857;
+    background: #a65b32;
 }
 
-/* Sections */
-section {
-    padding: 65px 8%;
+.collection {
+    padding: 65px 7%;
     text-align: center;
 }
 
-.section-title {
+.collection h2,
+.about h2,
+.cart h2,
+.contact h2 {
     font-size: 35px;
-    color: #501b13;
-    margin-bottom: 30px;
+    color: #8b3154;
+    margin-bottom: 15px;
 }
 
-/* About */
-.about p {
-    max-width: 750px;
-    margin: auto;
-    line-height: 1.8;
-    font-size: 17px;
+.subtitle {
+    margin-bottom: 35px;
+    color: #946273;
 }
 
-/* Food Menu */
-.menu-container {
+.products {
     display: grid;
-    grid-template-columns:
-    repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
     gap: 25px;
 }
 
-.menu-card {
+.product {
     background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 3px 12px #0002;
-    padding-bottom: 20px;
-    transition: transform 0.3s;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(100,29,59,.12);
+    transition: .3s;
 }
 
-.menu-card:hover {
+.product:hover {
     transform: translateY(-8px);
 }
 
-.menu-card img {
+.product img {
     width: 100%;
-    height: 190px;
+    height: 230px;
     object-fit: cover;
+    border-radius: 12px;
 }
 
-.menu-card h3 {
+.product h3 {
     margin: 15px 0 8px;
-    color: #501b13;
 }
 
-.price {
-    color: #d38b15;
+.product p {
+    color: #a66b25;
     font-weight: bold;
-    margin-top: 10px;
+    font-size: 19px;
+    margin-bottom: 15px;
 }
 
-/* Gallery */
-.gallery {
-    display: grid;
-    grid-template-columns:
-    repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-}
-
-.gallery img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-/* Contact */
-.contact {
-    background: #501b13;
+.product button {
+    background: #741f42;
     color: white;
+    border: none;
+    padding: 11px 22px;
+    border-radius: 20px;
+    cursor: pointer;
 }
 
-.contact .section-title {
-    color: #ffc857;
+.product button:hover {
+    background: #d99b48;
 }
 
-.contact p {
-    margin: 15px;
-    font-size: 17px;
+.about {
+    background: #f8e5eb;
+    padding: 65px 12%;
+    text-align: center;
+    line-height: 1.8;
 }
 
-/* Footer */
+.cart {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+#cart-items {
+    margin: 25px 0;
+    line-height: 2;
+}
+
+.cart h3 {
+    margin-bottom: 20px;
+}
+
+.contact {
+    background: #641d3b;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    line-height: 2;
+}
+
+.contact h2 {
+    color: #ffdf9e;
+}
+
 footer {
-    background: #260d09;
+    background: #351021;
     color: white;
     text-align: center;
     padding: 20px;
+    line-height: 2;
 }
 
-/* Mobile Responsive */
 @media(max-width: 700px) {
-
     header {
         flex-direction: column;
-        gap: 15px;
     }
 
     nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
+        text-align: center;
     }
 
     nav a {
-        margin: 0;
-        font-size: 14px;
+        display: inline-block;
+        margin: 7px;
     }
 
     .hero h1 {
         font-size: 36px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    .section-title {
-        font-size: 28px;
     }
 }
